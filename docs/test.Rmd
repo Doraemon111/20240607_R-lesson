@@ -1,0 +1,26 @@
+---
+title: "test"
+author: "Taoliu"
+date: "2024-06-07"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+D0 <- c(42.6,	43.1,	42.0)
+D1 <- c(41.6,	41.9,	40.8)
+shapiro.test(D1)
+var.test(D0,D1)
+t.test(D0,D1,var.equal = T)
+
+
+B1 <- c(8.4,	9.2	,7.8)
+B2 <- c(10.6,	8.3,	9.3)
+shapiro.test(B2)
+var.test(B1,B2)
+t.test(B1,B2,var.equal = T)
+```
+
